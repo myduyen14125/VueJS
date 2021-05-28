@@ -10,13 +10,18 @@ var list = new Vue({
         storeList(){
             //nếu không tìm thấy item trong list = currentInput -> nó đang sai, thì đẩy currentInput vô lists
             if(!this.lists.find(item => item.name === this.currentInput))
-            {
-                this.lists.push({
-                    name: this.currentInput,
-                    done: false,
-                    count: 0
-                })
-                this.currentInput = ''
+            {   
+                if(this.currentInput !== ''){
+                    this.lists.push({
+                        name: this.currentInput,
+                        done: false,
+                        count: 0
+                    })
+                    this.currentInput = ''
+                }
+                else{
+                    alert("Please fill out this field!")
+                }
             }
             else{
                 alert("Có rồi á á")
@@ -40,13 +45,16 @@ var list = new Vue({
             if(!this.lists.find(item => item.name === this.currentInput))
             {
                 //alert(this.selectedIndex)
-                this.lists[this.selectedIndex]={
-                    name: this.currentInput,
-                    count: 0,
-                    done: false,
-                
+                if(this.currentInput !== ''){
+                    this.lists[this.selectedIndex]={
+                        name: this.currentInput,
+                        count: 0,
+                        done: false,
+                    
+                    }
+                    this.isEditing = false
                 }
-                this.isEditing = false
+                else{alert("Please fill out this field!")}
             }
             else{
                 alert("Có rồi á á")
