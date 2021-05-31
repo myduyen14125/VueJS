@@ -1,5 +1,3 @@
-#Anh ơi, khi đọc file anh bấm vô cái chỉnh sửa để đọc cho đẹp chơ em bỏ file lên hắn bị thay đổi thành thẻ html nên khó đọc lắm ạ
-
 1. Components - Templates
 - a resuable piece of code or template -> we use in different review instances (multiple vue instances). Instead of write separately for many vue instances ==> Create a component which we can inject into each one. 
 - Create component: Vue.component('name_of_this_component', {function_can_pass_through_different_propeties})
@@ -52,6 +50,7 @@ Vue.component('hello', {
  + Compile everything on machine, not in a browser
  + Make a live reload dev server
 - Install nodejs to use npm 
+
 
 
 
