@@ -64,15 +64,38 @@ vue init <template_name> <project_name> or vue create my-project
 ```
 - Then we can see project name, project description, author, license, use sass -> It's done now
 - To get started:
-```cd <project-name>
+```
+   cd <project-name>
    npm install
    npm run dev
 ```
 - Note: We can find the current available templates include like webpack, webpack-simple... on the website.
+- Open up the file has just created: We had:
+   + index.html: file that served up to us
+   + When we compile our files for production -> we will get a distribution folder which we can use to push to server.
+   + package-lock.json: contains infor about our project 
+   + webpack.config.js: bundling -> allow to use ES6,...
+   + assets: photos... right here
+   + main.js: kicks in when we run app -> control everything -> can use ES6 features. Import App.vue right here too. 
+   + App.vue: this is our root component -> be rendered to main.js
+   -> this is a vue file : is just an extension of a component 
+   We can access data form object in script tag, this is the component as well, all we can also make component by Vue.component('', {}); in main.js file. (Need to export object) (export default.... )
+   
 
+- ROOT COMPONENT: the component that lives at the very top of our application
 
-
-
+- On the .vue file, we have:
+```
+<script>
+export default{
+   name: '<the name of the component(when use nesting component)',
+   data: (when use component, data is function Note note!) return to something..
+   //data(){return...} = data: function(){return... } 
+    
+}
+</script>
+```
+- Note: we have to have everything on one div in template because it is single root component. 
 
 
 
