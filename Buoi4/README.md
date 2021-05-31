@@ -53,7 +53,11 @@
  + Use single file templates 
  + Compile everything on machine, not in a browser
  + Make a live reload dev server
-- Install nodejs to use npm 
+- Install nodejs to use npm -> install vue CLI
+- github vue-cli: https://github.com/vuejs/vue-cli -> installation 
+- Navigate into the directory which want to create the project : cd/....
+- vue init <template_name> <project_name> or vue create my-project
+
 
 
 
