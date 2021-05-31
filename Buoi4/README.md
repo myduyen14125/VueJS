@@ -48,15 +48,30 @@
 ```
 3. The Vue CLI (command line interface)
 - Create a dev environment workflow with webpack -> setting up a vue project using the vue CLI 
- + Use ES^ features 
+ + Use ES^6 features 
  + Compile and minify our JS into 1 file -> reducing our loading
  + Use single file templates 
  + Compile everything on machine, not in a browser
  + Make a live reload dev server
 - Install nodejs to use npm -> install vue CLI
-- github vue-cli: https://github.com/vuejs/vue-cli -> installation 
+- github vue-cli: 
+https://github.com/vuejs/vue-cli -> installation 
+https://www.npmjs.com/package/vue-cli
 - Navigate into the directory which want to create the project : cd/....
-- vue init <template_name> <project_name> or vue create my-project
+- Create project: 
+```
+vue init <template_name> <project_name> or vue create my-project
+```
+- Then we can see project name, project description, author, license, use sass -> It's done now
+- To get started:
+```cd <project-name>
+   npm install
+   npm run dev
+```
+- Note: We can find the current available templates include like webpack, webpack-simple... on the website.
+
+
+
 
 
 
