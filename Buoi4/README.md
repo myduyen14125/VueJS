@@ -44,10 +44,12 @@ Vue.component('hello', {
 
 3. The Vue CLI (command line interface)
 - Create a dev environment workflow with webpack -> setting up a vue project using the vue CLI 
-
-
-
-
+ + Use ES^ features 
+ + Compile and minify our JS into 1 file -> reducing our loading
+ + Use single file templates 
+ + Compile everything on machine, not in a browser
+ + Make a live reload dev server
+- Install nodejs to use npm 
 
 
 
