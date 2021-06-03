@@ -100,8 +100,32 @@ export default{
 4. Nesting Components
 -For larger applications -> split our code up into diffrent components. 
 - Struct such as: Root component -> Header/Article/Footer Components -> nesting components. 
+- 2 types:
 
++ Globally: can use that component in any other component 
+In file.vue (will be nested into Root.vue file)
+```
+import <name_import> from <name_of_file_new_component.vue>
 
+Vue.component('name_of_component', name_import)
+```
+We import the new file has new component to the main.js file. Then we call it nested in the root component by HTML tag:
+In file.html
+```<name_of_component> </name_of_component>```
+
++ Locally: only use that component and nest it in the component we register it. 
+In Root.vue file:
+```
+<script>
+import <name_import> from <name_of_file_new_component.vue>
+
+export default{
+   components: {
+      name_of_component: name_import,
+   }
+}
+```
+Then we call in index.html like the globally. 
 
 
 

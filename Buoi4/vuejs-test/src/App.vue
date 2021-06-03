@@ -1,23 +1,24 @@
 <template>
-  <div id="####">
+  <div id="app">
     <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
+    <test></test>
   </div>
 </template>
 
 <script>
+import Test from './test.vue'
+
 export default {
-  name: '####',
+  components: {
+    test: Test,
+  },
+  name: 'app',
   data () {
     return{
       title: "Your first Vue file! "
     }
   },
-  methods: {
-      greeting: function(){
-        return "yahooooo!";
-      }
-  }
+  
 }
 </script>
 
