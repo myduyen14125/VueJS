@@ -97,6 +97,12 @@ export default{
 ```
 - Note: we have to have everything on one div in template because it is single root component. 
 
+4. Nesting Components
+-For larger applications -> split our code up into diffrent components. 
+- Struct such as: Root component -> Header/Article/Footer Components -> nesting components. 
+
+
+
 
 
 
