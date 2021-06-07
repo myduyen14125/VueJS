@@ -134,5 +134,3 @@ Then we call in index.html like the globally.
 
 
 
-
-

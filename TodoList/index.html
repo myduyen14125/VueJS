@@ -19,7 +19,7 @@
         <h1>To do List</h1>
 
         <div v-if="!isEditing" style="margin-bottom: 5vh;">
-          <input type="text" v-model="currentInput" v-on:keyup.enter="storeList"/>
+          <input type="text" v-model="currentInput" v-on:keyup.enter="storeList" placeholder="What's need to be done?"/>
           <input type="submit" value="Add" v-on:click="storeList"/>
         </div>
 
