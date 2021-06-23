@@ -111,7 +111,8 @@ Vue.component('name_of_component', name_import)
 ```
 We import the new file has new component to the main.js file. Then we call it nested in the root component by HTML tag:
 In file.html
-```<name_of_component> </name_of_component>```
+```<name_of_component> </name_of_component>
+```
 
 + Locally: only use that component and nest it in the component we register it. 
 In Root.vue file:
