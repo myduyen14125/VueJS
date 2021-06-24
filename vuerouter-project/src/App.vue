@@ -25,7 +25,7 @@ export default ({
   },
   data() {
     return{
-      loggIn: true,
+      loggIn: true
     }
   },
   created() {

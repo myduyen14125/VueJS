@@ -14,12 +14,23 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('../views/About.vue'),
+    layout: 'defaultLayout'
   },
   {
     path: '/blogs',
     name: 'Blogs',
     component: () => import('../views/Blogs.vue')
+  },
+  {
+    path: '/blog/:id',
+    component: () => import('../views/BlogDetail.vue'),
+    // children: [
+    //   {
+    //     path: 'detail',
+    //     component: () => import('')
+    //   }
+    // ]
   },
   {
     //Match everything -> run when can't find these path above
