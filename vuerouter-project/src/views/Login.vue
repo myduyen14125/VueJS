@@ -42,6 +42,7 @@ a:hover{
   width: 450px;
   padding: 1rem;
   text-align: center;
+  box-shadow: 5px 5px 13px -4px rgba(0,0,0,0.71);
 }
 input{
   display: block;

@@ -20,11 +20,15 @@ export default ({
 <style scoped>
 .secret-layout{
     display: flex;
+    overflow-x: hidden;
 }
 Sidebar{
     position: fixed;
     top: 0;
     left: 0;
+    height: 100vh;
 }
-
+.content{
+    width: calc(100% - 250px);
+}
 </style>
