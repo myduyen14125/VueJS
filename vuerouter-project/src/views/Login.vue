@@ -51,7 +51,6 @@ input{
   background-color: #f3f3f3;
   color: #2c3e50;
   width: 100%;
-  outline: none;
   margin: 20px auto;
   border: none;
   box-sizing: border-box;

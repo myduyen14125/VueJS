@@ -31,10 +31,15 @@ export default ({
 
 <style scoped>
 .nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   height: 7vh;
   /* box-shadow: 0 4px 6px -2px gray; */
   margin: 0;
   padding: 10px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;

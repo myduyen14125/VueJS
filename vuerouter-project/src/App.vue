@@ -56,6 +56,9 @@ body{
 a{
   text-decoration: none;
 }
+a.router-link-exact-active {
+  border-bottom: 5px solid #2c3e50;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
