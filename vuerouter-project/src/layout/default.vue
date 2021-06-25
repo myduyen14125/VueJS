@@ -16,5 +16,7 @@ export default ({
 </script>
 
 <style scoped>
-
+.default-layout{
+    margin: 0;
+}
 </style>

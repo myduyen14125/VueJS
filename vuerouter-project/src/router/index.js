@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -33,10 +33,26 @@ const routes = [
     // ]
   },
   {
+    path: '/login',
+    component: () => import('../views/Login.vue'),
+    meta: { layout: 'unauth'}
+  },
+  {
+    path: '/signup',
+    component: () => import('../views/SignUp.vue'),
+    meta: { layout: 'unauth'}
+  },
+  {
     //Match everything -> run when can't find these path above
     path: '*',
-    component: () => import('../views/NotFound.vue')
-  }
+    component: () => import('../views/NotFound.vue'),
+    meta: { layout: 'unauth'}
+  },
+  {
+    path: '/dashboard',
+    component: () => import('../views/Dashboard.vue'),
+    meta: { layout: 'secret'}
+  },
 ]
 
 const router = new VueRouter({

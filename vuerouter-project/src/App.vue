@@ -17,11 +17,13 @@
 <script>
 import defaultLayout from './layout/default.vue'
 import unauthLayout from './layout/unauth.vue'
+import secretLayout from './layout/secret.vue'
 
 export default ({
   components: {
     defaultLayout,
-    unauthLayout
+    unauthLayout,
+    secretLayout
   },
   data() {
     return{
@@ -33,7 +35,9 @@ export default ({
   },
   computed: {
     layout() {
-      return this.$route.meta.layout === 'unauth' ? 'unauthLayout' : 'defaultLayout'
+      if(this.$route.meta.layout === 'unauth') return 'unauthLayout';
+      if(this.$route.meta.layout === 'secret') return 'secretLayout';
+      else return 'defaultLayout'
     }
   }
 })
@@ -41,6 +45,17 @@ export default ({
 
 
 <style>
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -49,18 +64,6 @@ export default ({
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 /* Enter and leave animations can use different. 
 Transition for each slide in one component
  durations and timing functions.              */

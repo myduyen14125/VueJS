@@ -15,7 +15,7 @@
 </template>
 
 <script>
-
+import {bus} from '../main'
 export default ({
   name: 'Blogs',
   created() {
@@ -25,7 +25,7 @@ export default ({
     return {
       blogs: [
         {
-          "id": "2",
+          "id": "0",
           "categoryId": "2",
           "createdAt": "2021-04-23T09:07:41.855Z",
           "title": "cross-platform",
@@ -34,7 +34,7 @@ export default ({
           "content": "I'll compress the cross-platform CSS monitor, that should alarm the JSON program!"
         },
         {
-          "id": "3",
+          "id": "1",
           "categoryId": "3",
           "createdAt": "2021-04-23T14:57:39.459Z",
           "title": "Bedfordshire",
@@ -43,7 +43,7 @@ export default ({
           "content": "If we transmit the bandwidth, we can get to the SCSI microchip through the back-end JBOD hard drive!"
         },
         {
-          "id": "4",
+          "id": "2",
           "categoryId": "4",
           "createdAt": "2021-04-23T13:31:36.828Z",
           "title": "programming application quantify",
@@ -53,19 +53,31 @@ export default ({
         }
       ]
     }
+  },
+  methods: {
+    transmitData: function(){
+      bus.$emit('transmitData', '')
+    }
   }
 })
 </script>
 
 <style scoped>
+.blog{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .blog-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
   padding: 1rem;
   border: 1px solid gray;
   border-radius: 10px;
-
+  max-width: 600px;
+  margin: 1rem auto;
 }
 </style>

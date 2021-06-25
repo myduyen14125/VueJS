@@ -1,35 +1,35 @@
 <template>
-  <div class="login-container">
-    <h1>Welcome back!</h1>
-    <p>Sign in to get the most out of nuntimum.</p>
+  <div class="signup-container">
+    <h1>Sign Up</h1>
+    <p>Sign up to get the most out of nuntimum.</p>
     <form action=""  v-on:submit.prevent="$router.push({
       path: '/dashboard'
     })">
-    <input type="text" placeholder="Username" required>
-    <input type="text" placeholder="Password" required>
-    <div class="more">
-      <div class="remember-me">
-        <input type="checkbox">
-        <span>Remember me</span>
+      <input type="text" placeholder="Username" required>
+      <input type="text" placeholder="Password" required>
+      <div class="more">
+        <div class="remember-me">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </div>
+        <a href="#">Need help?</a>
       </div>
-      <a href="#">Forget Password?</a>
+    <button>Sign Up</button>
+    </form>
+    <div class="need-account">
+      <p>Have an account? </p>
+      <router-link to="/login">Login here</router-link>
     </div>
-    <button>Login</button>
-  </form>
-  <div class="need-account">
-    <p>Don't have an account? </p>
-    <router-link to="/signup">Sign up here</router-link>
-  </div>
     
   </div>
-    
+
 </template>
 
 <style scoped>
 a{
   color: #2c3e50;
   border-bottom: 1px solid white;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 a:active{
   color: #1e2731;
@@ -38,7 +38,7 @@ a:hover{
     border-bottom: 1px solid #2c3e50;
 }
 
-.login-container{
+.signup-container{
   width: 450px;
   padding: 1rem;
   text-align: center;
@@ -90,6 +90,7 @@ input[type="checkbox"]{
   width: fit-content;
   margin: 10px;
 }
+
 .need-account{
   display: flex;
   align-items: center;
