@@ -19,7 +19,7 @@ yarn build
 ```
 yarn lint
 ```
-###Ideas for UI
+### Ideas for UI
 https://www.figma.com/file/fQcYavpoLAoaT3ry4mSgVD/Nuntium-Blog-UI-Design-(Community)?node-id=2%3A712
 
 ### Customize configuration
