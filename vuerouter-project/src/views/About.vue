@@ -27,8 +27,8 @@
           <p>{{ stories[2].content }}</p>
         </div>
         <div class="photo-box">
-          <img style="width: 540px" class="photo" :src="stories[2].thumbnail" alt="">
-          <img style="width: 540px" class="photo" :src="stories[3].thumbnail" alt="">
+          <img class="photo smaller-photo" :src="stories[2].thumbnail" alt="">
+          <img class="photo smaller-photo" :src="stories[3].thumbnail" alt="">
         </div>
       </div>
 
@@ -36,7 +36,7 @@
 
     <div class="slogan">
       <h1>Because we are you.<br>Humans</h1>
-      <p>Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui dolor cillum fugiat ad.</p>
+      <p style="width: 90%">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui dolor cillum fugiat ad.</p>
     </div>
 
     <Footer/>
@@ -104,13 +104,13 @@ export default ({
   font-size: 1.3rem;
 }
 .intro p{
-  width: 30%;
+  width: 32%;
 }
 .about-container{
   width: 90%;
   background-color: #181f27;
   margin: auto;
-  padding: 30px;
+  padding: 30px 0;
   color: white;
   box-sizing: border-box;
   text-align: left;
@@ -139,7 +139,7 @@ export default ({
   z-index: -1;
 }
 .box1{
-  width: 88%;
+  width: 90%;
   margin:80px auto 0;
   display: flex;
   justify-content: space-between;
@@ -170,6 +170,13 @@ export default ({
   object-fit: cover;
   margin: 0 20px;
 }
+.photo-box{
+  display: flex;
+  justify-content: center;
+}
+.smaller-photo{
+  width: 540px;
+}
 .slogan{
   height: 65vh;
   display: flex;
@@ -179,5 +186,109 @@ export default ({
 }
 .slogan p{
   width: 430px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1320px) {
+  .photo{
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 20px;
+  }
+  .smaller-photo{
+    width: 43%;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .content{
+    font-size: 0.9rem;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .intro p{
+    width: 60%;
+  }
+  .content{
+    font-size: 0.9rem;
+    width: 45%;
+  }
+  h1{
+    font-size: 1.4rem;
+  }
+  .photo{
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro p{
+    width: 80%;
+  }
+  .content{
+    font-size: 0.8rem;
+    width: 50%;
+    margin: 20px;
+  }
+  h1{
+    font-size: 1.2rem;
+  }
+  .photo{
+    height: 270px;
+  }
+  .smaller-photo{
+    height: 270px;
+  }
+  .box1{
+    width: 100%;
+  }
+  .box2 {
+    top: -30px;
+}
+  .box3{
+    margin: 20px auto 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .intro p{
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .content{
+    font-size: 0.8rem;
+    width: 56%;
+  }
+  h1{
+    font-size: 1.05rem;
+  }
+  p{
+    font-size: 0.8rem;
+  }
+  .photo{
+    height: 200px;
+  }
+  .smaller-photo{
+    height: 200px;
+  }
+  .box1{
+    width: 100%;
+  }
+  .box1 .content p{
+    display: none;
+  }
+  .box3{
+    margin: 20px auto 50px;
+  }
+}
+@media screen and (max-width: 420px){
+  .photo{
+    height: 150px;
+  }
+  .smaller-photo{
+    height: 150px;
+  }
 }
 </style>
