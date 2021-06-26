@@ -1,0 +1,33 @@
+<template>
+    <div
+      class="logo"
+      @click="$router.push({
+          path: '/',
+        })">
+      <div class="black" style="color: white">nu</div>
+      ntimum.
+    </div>
+</template>
+
+<style scoped>
+.logo {
+  font-size: 30px;
+  margin: 20px auto;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.black {
+  background-color: #1e2731;
+  position: relative;
+  top: -8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 55px;
+  height: 45px;
+  margin: 0px;
+}
+</style>

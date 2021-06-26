@@ -95,4 +95,5 @@ input[type="checkbox"]{
   align-items: center;
   justify-content: space-between;
 }
+
 </style>
