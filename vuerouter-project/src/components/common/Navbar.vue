@@ -75,7 +75,7 @@ export default ({
   align-items: center;
 }
 .login-button{
-  padding: 10px 15px;
+  padding: 9px 15px;
   font-size: 18px;
   border-radius: 8px;
   background-color: white;

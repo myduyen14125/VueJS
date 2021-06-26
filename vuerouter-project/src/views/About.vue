@@ -27,8 +27,8 @@
           <p>{{ stories[2].content }}</p>
         </div>
         <div class="photo-box">
-          <img style="width: 560px" class="photo" :src="stories[2].thumbnail" alt="">
-          <img style="width: 560px" class="photo" :src="stories[3].thumbnail" alt="">
+          <img style="width: 540px" class="photo" :src="stories[2].thumbnail" alt="">
+          <img style="width: 540px" class="photo" :src="stories[3].thumbnail" alt="">
         </div>
       </div>
 
