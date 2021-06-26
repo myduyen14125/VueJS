@@ -164,4 +164,56 @@ input:hover{
 .search-item button:hover{
     background-color: #f3f3f3;
 }
+/* Responsive */
+@media screen and (max-width: 1140px) {
+  .search-item{
+      width: 80%;
+  }
+}
+@media screen and (max-width: 992px) {
+  input{
+      font-size: 1rem;
+  }
+  .search-item{
+      width: 90%;
+  }
+}
+@media screen and (max-width: 768px){
+    .tags{
+        height: auto;
+    }
+    .search-bar{
+        width: 450px;
+    }
+    .search-item{
+        width: 98%;
+    }
+}
+@media screen and (max-width: 500px){
+    .search-bar{
+        width: 400px;
+    }
+    input{
+        font-size: 0.95rem;
+    }
+    .search-item button{
+        margin: 10px;
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 420px){
+    .search-bar{
+        width: 270px;
+    }
+    input{
+        font-size: 0.85rem;
+    }
+    input::placeholder{
+        color: white;
+    }
+    .search-item button{
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+}
 </style>
