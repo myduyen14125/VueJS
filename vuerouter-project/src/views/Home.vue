@@ -71,7 +71,6 @@ img{
   box-sizing: border-box;
   text-align: left;
   width: 500px;
-  height: 400px;
   padding: 50px;
   background-color: white;
 }
@@ -81,9 +80,9 @@ img{
 }
 .infor{
   top: 13%;
-  right: 10%;
+  right: 8%;
 }
-.intro h2{
+.intro h2, .infor h2{
   font-size: 1.6rem;
 }
 h1{
@@ -98,5 +97,75 @@ h1 span{
   position: absolute;
   bottom: -10px;
   left: 22%;
+}
+/* Responsive */
+@media screen and (max-width: 1140px) {
+  .home{
+    font-size: 1rem;
+  }
+  .intro, .infor{
+    width: 450px;
+    padding: 40px;
+  }
+  .intro h2, .infor h2{
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .home{
+    font-size: 0.95rem;
+  }
+  .intro, .infor{
+    width: 400px;
+    padding: 35px;
+  }
+  .intro h2, .infor h2{
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .home{
+    font-size: 0.85rem;
+  }
+  .intro, .infor{
+    width: 350px;
+    padding: 35px;
+  }
+  .intro h2, .infor h2{
+    font-size: 1.25rem;
+  }
+  h1{
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .home{
+    font-size: 0.75rem;
+  }
+  .intro, .infor{
+    width: 320px;
+    padding: 25px;
+  }
+  .intro h2, .infor h2{
+    font-size: 1.1rem;
+  }
+  .type{
+    display: none;
+  }
+}
+@media screen and (max-width: 420px){
+  .home{
+    font-size: 0.7rem;
+  }
+  .intro, .infor{
+    width: 260px;
+    padding: 25px;
+  }
+  .intro h2, .infor h2{
+    font-size: 1.1rem;
+  }
+  .type{
+    display: none;
+  }
 }
 </style>
