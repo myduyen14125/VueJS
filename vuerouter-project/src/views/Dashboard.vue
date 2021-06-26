@@ -5,23 +5,23 @@
       <button class="customize-button">Customize</button>
     </div>
     <div class="discription-container">
-      <div class="box" style="width: 12%">
+      <div class="box sumup">
         <span style="display: block;text-align: left;">Total Posts</span>
         <div class="info">
           <div style="margin: 0 10px" class="fa fa-pencil"></div>
           <span class="number">214</span>
         </div>
-        <span style="color: gray; display: block;text-align: right;">This month</span>
+        <span style="color: gray; display: block;text-align: right;" class="time">This month</span>
       </div>
-      <div class="box" style="width: 12%">
+      <div class="box sumup">
         <span style="display: block;text-align: left;">Total Views</span>
         <div class="info">
           <div style="margin: 0 10px" class="fa fa-eye"></div>
           <span class="number">130K</span>
         </div>
-        <span style="color: gray; display: block;text-align: right;">This month</span>
+        <span style="color: gray; display: block;text-align: right;" class="time">This month</span>
       </div>
-      <div class="box">
+      <div class="box article">
         <span>Most Viewed Article</span>
         <div class="info">
           The Most Awesome Article Man Has Ever Written
@@ -83,6 +83,9 @@ export default ({
   padding: 15px;
   height: 80%;
 }
+.sumup{
+  width: 124px;
+}
 .box .info{
   font-size: 1.5rem;
   display: flex;
@@ -91,5 +94,19 @@ export default ({
 }
 .total-view{
   margin-top: 50px;
+}
+/* Responsive */
+@media screen and (max-width: 1320px) {
+    h1{
+        font-size: 1.6rem;
+    }
+    .box .info{
+      font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 1140px){
+    .article{
+      display: none;
+    }
 }
 </style>

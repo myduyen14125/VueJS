@@ -38,4 +38,5 @@ export default ({
     align-items: flex-end;
     margin-left: 250px;
 }
+
 </style>
