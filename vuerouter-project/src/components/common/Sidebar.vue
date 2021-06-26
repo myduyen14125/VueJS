@@ -65,7 +65,7 @@ a {
   width: 250px;
   height: 100vh;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 .logo {
   font-size: 30px;

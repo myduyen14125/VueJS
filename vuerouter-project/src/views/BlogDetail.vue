@@ -9,7 +9,7 @@
       <p>{{blogs[$route.params.id].content}}</p><br>
       <p>{{blogs[$route.params.id].content}}</p><br>
       <p>{{blogs[$route.params.id].content}}</p><br>
-
+      <Author/>
     </div>
     
     <Footer/>
@@ -18,9 +18,11 @@
 
 <script>
 import Footer from '../components/common/Footer.vue'
+import Author from '../components/uncommon/Author.vue'
 export default {
   components: {
-    Footer
+    Footer,
+    Author
   },
   created() {
     console.log(this.$route.params.id)

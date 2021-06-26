@@ -1,15 +1,16 @@
 <template>
     <div class="unauth-layout">
-        Unauth here
-        Hhehe vô được unauth rồi nè 
+        <Logo/>
         <slot/>
     </div>
 </template>
 
 <script>
-
+import Logo from '../components/uncommon/Logo.vue'
 export default ({
-    
+    components: {
+      Logo
+    }
 })
 </script>
 
@@ -21,5 +22,10 @@ export default ({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.logo{
+  position: absolute;
+  top: 5px;
+  left: 20px;
 }
 </style>
