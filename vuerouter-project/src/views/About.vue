@@ -36,16 +36,21 @@
 
     <div class="slogan">
       <h1>Because we are you.<br>Humans</h1>
+      <p>Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui dolor cillum fugiat ad.</p>
     </div>
+
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Logo from '../components/uncommon/Logo.vue'
+import Footer from '../components/common/Footer.vue'
 export default ({
   name: 'About',
   components: {
-    Logo
+    Logo, 
+    Footer
   },
   created() {
     console.log(this.$route)
@@ -120,7 +125,7 @@ export default ({
   bottom: 0;
   left: 10%;
   width: 6px;
-  height: 50%;
+  height: 60%;
   z-index: -1;
 }
 .about-container::after{
@@ -164,5 +169,15 @@ export default ({
   height: 450px;
   object-fit: cover;
   margin: 0 20px;
+}
+.slogan{
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slogan p{
+  width: 430px;
 }
 </style>
