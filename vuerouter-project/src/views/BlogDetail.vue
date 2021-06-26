@@ -4,18 +4,24 @@
     <img :src="blogs[$route.params.id].thumbnail" alt="">
     <div class="container">
       <h2>{{blogs[$route.params.id].title}}</h2>
-      <em>{{blogs[$route.params.id].createdAt}}</em> |
-      <em><strong>{{blogs[$route.params.id].description}}</strong></em>
-      <p>{{blogs[$route.params.id].content}}</p>
+      <em style="color: gray">{{blogs[$route.params.id].createdAt}}</em> |
+      <em style="color: gray"><strong>{{blogs[$route.params.id].description}}</strong></em>
+      <p>{{blogs[$route.params.id].content}}</p><br>
+      <p>{{blogs[$route.params.id].content}}</p><br>
+      <p>{{blogs[$route.params.id].content}}</p><br>
 
     </div>
     
+    <Footer/>
   </div>
 </template>
 
 <script>
-
+import Footer from '../components/common/Footer.vue'
 export default {
+  components: {
+    Footer
+  },
   created() {
     console.log(this.$route.params.id)
     console.log(this.$route);
@@ -77,6 +83,15 @@ export default {
           "description": "Dynamic",
           "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
         },
+        {
+          "id": "6",
+          "categoryId": "2",
+          "createdAt": "2021-04-23T09:07:41.855Z",
+          "title": "Cross-platform",
+          "thumbnail": "https://images8.alphacoders.com/519/thumb-1920-519517.jpg",
+          "description": "Legacy",
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+        },
       ]
     }
     
@@ -100,7 +115,15 @@ export default {
   object-fit: cover;
 }
 .container{
-  width: 75%;
-  margin: auto;
+  width: 55%;
+  text-align: left;
+  margin: 50px auto;
+}
+@media screen and (max-width: 992px) {
+  .container{
+    width: 75%;
+    text-align: left;
+    margin: 50px auto;
+  }
 }
 </style>
