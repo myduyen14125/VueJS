@@ -148,11 +148,10 @@ export default ({
 }
 .blog-container{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   box-shadow: 3px 5px 4px -5px rgba(0,0,0,0.71);
-  width: 60%;
+  width: 760px;
   margin: 1.6rem auto;
   text-align: left;
   font-size: 1rem;
@@ -185,5 +184,62 @@ export default ({
 }
 .content .time{
   font-size: 0.95rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .cover .content{
+    width: 40%;
+    font-size: 0.95rem;
+  }
+  .content{
+    font-size: 0.95rem;
+  }
+  .blog-container{
+    width: 700px;
+  }
+  .photo{
+    width: 250px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cover .content{
+    width: 65%;
+    font-size: 0.8rem;
+  }
+  .content{
+    font-size: 0.8rem;
+  }
+  .blog-container .content p{
+    display: none;
+  }
+  .blog-container{
+    width: 530px;
+  }
+  .photo{
+    width: 150px;
+    height: 110px;
+  }
+}
+@media screen and (max-width: 567px){
+  .content h3{
+    font-size: 1rem;
+  }
+  .content .description, .time{
+    font-size: 0.8rem;
+  }
+  .blog-container{
+    width: 90%;
+  }
+  .photo{
+    width: 130px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 420px){
+  .blog-container .content .time {
+    display: none;
+  }
 }
 </style>
