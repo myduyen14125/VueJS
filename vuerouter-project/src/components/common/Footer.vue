@@ -46,4 +46,43 @@ a{
 .fa:hover{
     color: gray;
 }
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .content{
+      width: 60%;
+  }
+  h1{
+      font-size: 1.6rem;
+  }
+  p{
+      font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px){
+  .content{
+      width: 70%;
+  }
+  p{
+      font-size: 0.95rem;
+  }
+  .fa{
+      font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .content{
+      width: 75%;
+  }
+  h1{
+      font-size: 1.3rem;
+  }
+  p{
+      font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 420px){
+  .content{
+      width: 85%;
+  }
+}
 </style>
