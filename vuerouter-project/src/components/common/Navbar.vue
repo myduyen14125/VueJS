@@ -1,18 +1,16 @@
 <template>
     <div class="nav">
       <div class="left-nav">
-        <div class="logo" @click="$router.push({
-          path: '/'
-        })">
-          <div class="black"></div>
-          <span style="color: white">nu</span>ntimum.
-        </div>
+        <Logo/>
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link> |
         <router-link to="/blogs">Blogs</router-link> |
       </div>
       <div class="right-nav">
-        <div class="fa fa-search" style="margin: 0 10px"></div>
+        <div class="search-bar" style="width: 60%">
+          <input type="text" placeholder="Find topics...">
+          <div class="fa fa-search" style="margin: 0 10px"></div>
+        </div>
         <button class="login-button" @click="$router.push({
           path: '/login'
         })">Login</button>
@@ -23,9 +21,11 @@
 </template>
 
 <script>
-
+import Logo from '../uncommon/Logo.vue'
 export default ({
-    
+    components: {
+      Logo
+    }
 })
 </script>
 
@@ -43,7 +43,7 @@ export default ({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .logo{
   font-size: 30px;
@@ -61,9 +61,17 @@ export default ({
   top: -10px;
   left: -13px;
 }
-.left-nav{
+.left-nav, .right-nav{
   width: 50%;
   display: flex;
+  align-items: center;
+}
+.right-nav{
+  justify-content: flex-end;
+}
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 .login-button{
@@ -88,5 +96,71 @@ a{
 }
 a:hover{
   border-bottom: 5px solid #2c3e50;
+}
+.search-bar{
+  position: relative;
+}
+input{
+  padding: 10px;
+  border-radius: 10px;
+  color: #2c3e50;
+  width: 85%;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.4s;
+  border: 1px solid gray;
+}
+input:hover{
+  border: 1px solid #2c3e50;
+}
+.fa-search{
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .nav{
+    font-size: 1.1rem;
+  }
+  .login-button{
+    font-size: 16px;
+  }
+  .search-bar input{
+    display: none;
+  }
+  .fa-search{
+    position: relative;
+    top: 0;
+  }
+}
+@media screen and (max-width: 768px){
+  .logo{
+    display: none;
+  }
+  .login-button{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px){
+  a{
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 420px){
+  .nav{
+    font-size: 1rem;
+  }
+  .login-button{
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .fa-search{
+    display: none;
+  }
+  a{
+    margin: 0 5px;
+  }
 }
 </style>
