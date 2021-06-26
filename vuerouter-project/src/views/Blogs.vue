@@ -3,10 +3,11 @@
     <h1>This is blogs page</h1>
     <template v-for="blog in blogs">
       <div class="blog-container" :key="'blog-'+blog.id" @click="$router.push(/blog/+blog.id)" >
-        <img :src="blog.thumbnail" alt="#" style="width: 150px;">
-        <div class="content-container">
-          <h2>{{ blog.title }}</h2>
-          <em>{{ blog.desciption }}</em>
+        <img class="photo" :src="blog.thumbnail" alt="#">
+        <div class="content">
+          <span class="description" style="display: block; color: gray; text-transform: uppercase">{{ blog.description }}</span>
+          <h3 class="title">{{ blog.title }}</h3>
+          <em class="time" style="color: gray">{{ blog.createdAt }}</em>
           <p>{{ blog.content }}</p>
         </div>
       </div>
@@ -28,29 +29,56 @@ export default ({
           "id": "0",
           "categoryId": "2",
           "createdAt": "2021-04-23T09:07:41.855Z",
-          "title": "cross-platform",
-          "thumbnail": "http://lorempixel.com/640/480/animals",
+          "title": "Cross-platform",
+          "thumbnail": "https://images8.alphacoders.com/519/thumb-1920-519517.jpg",
           "description": "Legacy",
-          "content": "I'll compress the cross-platform CSS monitor, that should alarm the JSON program!"
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
         },
         {
           "id": "1",
           "categoryId": "3",
           "createdAt": "2021-04-23T14:57:39.459Z",
           "title": "Bedfordshire",
-          "thumbnail": "http://lorempixel.com/640/480/transport",
+          "thumbnail": "https://images.alphacoders.com/736/thumb-1920-736461.png",
           "description": "Investor",
-          "content": "If we transmit the bandwidth, we can get to the SCSI microchip through the back-end JBOD hard drive!"
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
         },
         {
           "id": "2",
           "categoryId": "4",
           "createdAt": "2021-04-23T13:31:36.828Z",
-          "title": "programming application quantify",
-          "thumbnail": "http://lorempixel.com/640/480/city",
+          "title": "Programming application quantify",
+          "thumbnail": "https://images3.alphacoders.com/727/thumbbig-72705.webp",
           "description": "Dynamic",
-          "content": "Use the redundant TCP capacitor, then you can parse the redundant monitor!"
-        }
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+        },
+        {
+          "id": "3",
+          "categoryId": "4",
+          "createdAt": "2021-04-23T13:31:36.828Z",
+          "title": "Programming application quantify",
+          "thumbnail": "https://images6.alphacoders.com/718/thumb-1920-718319.png",
+          "description": "Dynamic",
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+        },
+        {
+          "id": "4",
+          "categoryId": "4",
+          "createdAt": "2021-04-23T13:31:36.828Z",
+          "title": "Programming application quantify",
+          "thumbnail": "https://images7.alphacoders.com/670/thumb-1920-670930.jpg",
+          "description": "Dynamic",
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+        },
+        {
+          "id": "5",
+          "categoryId": "4",
+          "createdAt": "2021-04-23T13:31:36.828Z",
+          "title": "Programming application quantify",
+          "thumbnail": "https://images3.alphacoders.com/555/thumb-1920-555568.jpg",
+          "description": "Dynamic",
+          "content": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+        },
       ]
     }
   },
@@ -75,9 +103,25 @@ export default ({
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border: 1px solid gray;
-  border-radius: 10px;
-  max-width: 600px;
-  margin: 1rem auto;
+  box-shadow: 3px 5px 4px -5px rgba(0,0,0,0.71);
+  width: 60%;
+  margin: 1.6rem auto;
+  text-align: left;
+  font-size: 1rem;
+}
+.photo{
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+}
+.content{
+  padding: 10px 25px;
+}
+.content h3{
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.content .time{
+  font-size: 0.95rem;
 }
 </style>
