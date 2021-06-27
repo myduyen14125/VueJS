@@ -133,8 +133,14 @@ export default ({
   methods: {
     transmitData: function(){
       bus.$emit('transmitData', '')
+    },
+  },
+  computed : {
+    previewContent: function(){
+      return this.blogs.content.slice(0,100) + '...';
     }
   }
+    
 })
 </script>
 
@@ -150,11 +156,16 @@ export default ({
   display: flex;
   align-items: center;
   padding: 1rem;
-  box-shadow: 3px 5px 4px -5px rgba(0,0,0,0.71);
+  box-shadow: 3px 4px 4px -5px rgba(0,0,0,0.71);
   width: 760px;
   margin: 1.6rem auto;
   text-align: left;
   font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.blog-container:hover{
+  box-shadow: 5px 8px 10px -5px rgba(0,0,0,0.71);
 }
 .cover{
   position: relative;

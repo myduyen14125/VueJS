@@ -47,7 +47,14 @@
 export default {
   data() {
     return {
-
+      menuLists: [
+        {
+          id: 0,
+          name: 'Dashboard',
+          icon: '<div class="fa fa-map-o"></div>',
+          active: true
+        }
+      ]
     }
   },
 };

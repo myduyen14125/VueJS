@@ -7,7 +7,7 @@
         <div class="fa fa-search" style="margin: auto 15px"></div>
         <div class="fa fa-bell-o" style="margin: auto 15px"></div>
         <div class="avt" style="margin: auto 15px">
-          <img src="https://c.wallhere.com/photos/de/31/Kyoukai_no_Kanata_anime_Kuriyama_Mirai-53836.png!d">
+          <img src="../../../assets/avt.jpg">
         </div>
       </div>
         <!-- <button @click="$router.go(-1)">Back</button> |
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+
 export default ({
     data(){
       return {
