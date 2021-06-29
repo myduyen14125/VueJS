@@ -46,17 +46,14 @@
       </div>
     </template>
 
-    <Footer/>
   </div>
 </template>
 
 <script>
 import {bus} from '../main'
-import Footer from '../components/common/Footer.vue'
 export default ({
   name: 'Blogs',
   components: {
-    Footer
   },
   created() {
     console.log(this.$route)

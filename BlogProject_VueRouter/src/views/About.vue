@@ -39,18 +39,15 @@
       <p style="width: 90%">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui dolor cillum fugiat ad.</p>
     </div>
 
-    <Footer/>
   </div>
 </template>
 
 <script>
 import Logo from '../components/uncommon/Logo.vue'
-import Footer from '../components/common/Footer.vue'
 export default ({
   name: 'About',
   components: {
     Logo, 
-    Footer
   },
   created() {
     console.log(this.$route)

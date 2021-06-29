@@ -33,18 +33,15 @@
       </div>
     </div>
     
-    <Footer/>
   </div>
 </template>
 
 <script>
 import Tags from '../components/uncommon/Tags.vue'
-import Footer from '../components/common/Footer.vue'
 export default {
   name: 'Home',
   components: {
     Tags,
-    Footer
   },
   created() {
     console.log(this.$route)

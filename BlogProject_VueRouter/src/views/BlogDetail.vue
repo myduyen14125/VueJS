@@ -12,16 +12,13 @@
       <Author/>
     </div>
     
-    <Footer/>
   </div>
 </template>
 
 <script>
-import Footer from '../components/common/Footer.vue'
 import Author from '../components/uncommon/Author.vue'
 export default {
   components: {
-    Footer,
     Author
   },
   created() {
