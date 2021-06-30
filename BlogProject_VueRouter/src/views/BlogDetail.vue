@@ -1,16 +1,22 @@
 <template>
   <div class="blog-detail">
     <!-- <h1>{{$route.params.id}}</h1> -->
-    <img :src="blogs[$route.params.id].thumbnail" alt="">
-    <div class="container">
-      <h2>{{blogs[$route.params.id].title}}</h2>
-      <em style="color: gray">{{blogs[$route.params.id].createdAt}}</em> |
-      <em style="color: gray"><strong>{{blogs[$route.params.id].description}}</strong></em>
-      <p>{{blogs[$route.params.id].content}}</p><br>
-      <p>{{blogs[$route.params.id].content}}</p><br>
-      <p>{{blogs[$route.params.id].content}}</p><br>
-      <Author/>
+    <div v-for="blog in blogs" :key="'blog'+blog.id" >
+      <div v-if="blog.id === $route.params.id">
+        <img :src="blog.thumbnail" alt="">
+        <div class="container">
+          <h2>{{blog.title}}</h2>
+          <em style="color: gray">{{blog.createdAt}}</em> |
+          <em style="color: gray"><strong>{{blog.description}}</strong></em>
+          <p>{{blog.content}}</p><br>
+          <p>{{blog.content}}</p><br>
+          <p>{{blog.content}}</p><br>
+          <Author/>
+        </div>
+      </div>
+      
     </div>
+    
     
   </div>
 </template>
