@@ -6,7 +6,7 @@
       path: '/dashboard'
     })">
       <input type="text" placeholder="Username" required>
-      <input type="text" placeholder="Password" required>
+      <input type="password" placeholder="Password" required>
       <div class="more">
         <div class="remember-me">
           <input type="checkbox">

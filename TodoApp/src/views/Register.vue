@@ -50,8 +50,11 @@ export default ({
       });
       console.log(this.name)
       console.log(this.phoneNumber)
+      alert('You have successfully registered !')
+      this.$router.push(`/users`)
     }
-  }
+  },
+  
 })
 </script>
 
