@@ -74,6 +74,7 @@ export default {
       this.edit = 'name';
       document.getElementById('edit-modal').style.display = "block";
       document.getElementById('menu-edit').style.display = "none";
+      //Instead of using JS, can also v-bind:class for element, then active the class true/false.
     },
     editPhone(){
       this.edit = 'phone';
@@ -94,6 +95,9 @@ export default {
           phoneNumber: this.currentInput,
         })
         this.user.phoneNumber = this.currentInput
+        // Another solution
+        // const response = axios.get(`https://60d94868eec56d001747768f.mockapi.io/v1/users/${id}`)
+        // this.user.name = response.data.name
       }
       this.currentInput = ''
       document.getElementById('edit-modal').style.display = "none";
