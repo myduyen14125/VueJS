@@ -104,10 +104,10 @@ export default {
     cancelModal(){
       document.getElementById('edit-modal').style.display = "none";
     },
-    async deleteUser(id){
+    deleteUser(id){
       alert('You decide to delete !')
       axios.delete(`https://60d94868eec56d001747768f.mockapi.io/v1/users/${id}`)
-      await this.$router.push(`/users`)
+      this.$router.push(`/users`)
     }
   }
 };
