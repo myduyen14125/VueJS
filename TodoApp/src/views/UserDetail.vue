@@ -3,6 +3,7 @@
     <!-- <h1>{{$route.params.id}}</h1> -->
     <div class="cover">
       <img :src="user.avatar" alt="">
+      <h1 style="text-align: center">{{user.name}}</h1>
       <div class="edit-profile">
         <button class="big-edit" @click="editProfile">Edit Profile</button>
         <div class="menu-edit" id="menu-edit">
@@ -29,8 +30,7 @@
     </div>
     
     <div class="container">
-      <h1 style="text-align: center">{{user.name}}</h1>
-      <div style="text-align: center; font-size: 1.08rem; margin-bottom: 30px">
+      <div style="text-align: center; font-size: 1.2rem; margin-bottom: 50px">
         | <em style="color: gray;">Time join in: {{user.createdAt}}</em> | <br><br>
         <em><strong>Phone number: {{user.phoneNumber}}</strong></em>
       </div>    
@@ -88,6 +88,10 @@ export default {
           name: this.currentInput,
         })
         this.user.name = this.currentInput
+        // Another solution, use async await but it a little slower so I comment here, hehe. 
+        // const response = await axios.get(`https://60d94868eec56d001747768f.mockapi.io/v1/users/${id}`)
+        // console.log(response)
+        // this.user.name = response.data.name
       }
       if(this.edit === 'phone'){
         axios.put(`https://60d94868eec56d001747768f.mockapi.io/v1/users/${id}`,
@@ -95,9 +99,6 @@ export default {
           phoneNumber: this.currentInput,
         })
         this.user.phoneNumber = this.currentInput
-        // Another solution
-        // const response = axios.get(`https://60d94868eec56d001747768f.mockapi.io/v1/users/${id}`)
-        // this.user.name = response.data.name
       }
       this.currentInput = ''
       document.getElementById('edit-modal').style.display = "none";
@@ -123,10 +124,11 @@ export default {
   min-height: 40vh;
 }
 .user-detail img{
-  width: 75%; 
-  height: 55vh;
+  width: 70%; 
+  height: 93%;
   object-fit: cover;
   position: relative;
+  border-radius: 10px;
 }
 .container{
   width: 55%;
@@ -149,11 +151,16 @@ button:hover{
 .cover{
   position: relative;
   padding: 0;
+  height: 65vh;
+  background: linear-gradient(180deg, #dddddd, white);
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 5px -4px rgba(0,0,0,0.71);
 }
 .edit-profile{
   position: absolute;
-  top: 80%;
-  right: 15%;
+  top: 70%;
+  right: 18%;
   width: 230px;
   text-align: right;
   padding: 0;
